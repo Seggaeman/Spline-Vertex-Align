@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6B05F1A7-5B65-40AE-BAB9-B41FCCF232BD}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>SplineKnotAlign</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Program Files\Autodesk\Autodesk 3ds Max 2011 SDK\maxsdk\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files\Autodesk\Autodesk 3ds Max 2011 SDK\maxsdk\lib;$(LibraryPath)</LibraryPath>
+    <OutDir>..\..\..\..\..\..\..\Program Files\Autodesk\3ds Max 2010\plugins</OutDir>
+    <TargetExt>.dlu</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetExt>.dlu</TargetExt>
+    <IncludePath>C:\Program Files\Autodesk\Autodesk 3ds Max 2011 SDK\maxsdk\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files\Autodesk\Autodesk 3ds Max 2011 SDK\maxsdk\lib;$(LibraryPath)</LibraryPath>
+    <OutDir>..\..\..\..\..\..\..\Program Files\Autodesk\3ds Max 2010\plugins\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;SPLINEKNOTALIGN_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>acap.lib;amodeler.lib;assetmanagement.lib;atscore.lib;biped.lib;bmm.lib;composite.lib;core.lib;crowd.lib;custdlg.lib;edmodel.lib;expr.lib;flt.lib;geom.lib;geomimp.lib;gfx.lib;gup.lib;helpsys.lib;igame.lib;imageviewers.lib;manipsys.lib;maxnet.lib;maxscrpt.lib;maxutil.lib;menuman.lib;menus.lib;mesh.lib;mnmath.lib;paramblk2.lib;particle.lib;ParticleFlow.lib;physique.lib;poly.lib;renderutil.lib;rtmax.lib;springsys.lib;tessint.lib;viewfile.lib;zlibdll.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>SplineKnotAlign.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;SPLINEKNOTALIGN_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ModuleDefinitionFile>SplineKnotAlign.def</ModuleDefinitionFile>
+      <AdditionalDependencies>acap.lib;//amodeler.lib;assetmanagement.lib;atscore.lib;biped.lib;bmm.lib;composite.lib;core.lib;crowd.lib;custdlg.lib;edmodel.lib;expr.lib;flt.lib;geom.lib;geomimp.lib;gfx.lib;gup.lib;helpsys.lib;igame.lib;imageviewers.lib;manipsys.lib;maxnet.lib;maxscrpt.lib;maxutil.lib;menuman.lib;menus.lib;mesh.lib;mnmath.lib;paramblk2.lib;particle.lib;ParticleFlow.lib;physique.lib;poly.lib;renderutil.lib;rtmax.lib;springsys.lib;tessint.lib;viewfile.lib;zlibdll.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="SplineKnotAlign.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="SplineKnotAlign.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SplineKnotAlign.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
